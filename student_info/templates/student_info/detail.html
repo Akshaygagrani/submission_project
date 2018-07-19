@@ -1,0 +1,13 @@
+{% extends 'student_info/base.html' %}
+{% block content %}
+
+
+
+      {% for details in detail %}                 <!-- iterating into the detail i.e the info.objecs.all() -->
+        <h2>Name -: {{ details }} </h2>
+        <u><p>Year of study</u> -: <b>{{ details.year }}</b></p>
+        <b><a href="{% url 'deep_info_student' pk=details.pk %}">Click here to see {{details}}'s full detail</a></b>
+
+        <br><br>
+      {% endfor %}
+{% endblock %}

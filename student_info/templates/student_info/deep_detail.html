@@ -1,0 +1,20 @@
+{% extends 'student_info/base.html' %}
+{% block content %}
+
+<h1> This the full info of <u>{{deep_info}}</u> </h1>
+
+<hr><hr> <br>
+
+  {% if deep_info.first_name %}
+    <h2><em>Full name -: &nbsp</em>{{ deep_info }}   {{ deep_info.last_name }} </h2></a>
+    <h3>
+        <p>Year of admission -: {{ deep_info.year }} </p>
+        <em><p>My message is-: &nbsp &nbsp</em>
+        {{ deep_info.message }}</p>
+    </h3>
+
+    <br><br>
+
+  {% endif %}
+
+{% endblock %}
